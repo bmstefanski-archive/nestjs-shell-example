@@ -1,3 +1,4 @@
+import * as chalk from 'chalk'
 import { ShellCommand, ShellComponent } from 'nestjs-shell'
 
 export class SecondTestCommandComponent extends ShellComponent {
@@ -12,12 +13,38 @@ export class SecondTestCommandComponent extends ShellComponent {
   }
 
   @ShellCommand({
-    name: 'howdy',
-    prefix: '/',
-    description: `Prints howdy in the shell and everybody's happy`,
-    pattern: '<name>',
+    name: 'colors',
+    prefix: '-',
+    description: `Random colors`,
   })
-  public async howdyCommand(name: string): Promise<string> {
-    return `howdy ${name}`
+  public async colors(): Promise<string> {
+    const colors = [
+      'bgRed',
+      'bgGreen',
+      'bgYellow',
+      'bgBlue',
+      'bgMagenta',
+      'bgCyan',
+      'bgWhite',
+      'bgRedBright',
+      'bgGreenBright',
+      'bgYellowBright',
+      'bgBlueBright',
+      'bgMagentaBright',
+      'bgCyanBright',
+      'bgWhiteBright',
+    ]
+
+    // Look, it's moving. It's alive, it's alive, it's alive.
+    // It's moving. It's alive, it's alive, it's alive, it's alive, it's alive!
+    return Array.from(Array(5))
+      .map((_, index) =>
+        colors
+          .sort(() => Math.random() - 0.5)
+          .map((functionName) => chalk[functionName]('    '))
+          [index % 2 === 0 ? 'reverse' : 'slice']()
+          .join(''),
+      )
+      .join('\n')
   }
 }
