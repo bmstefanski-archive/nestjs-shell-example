@@ -8,7 +8,7 @@ export class FirstTestCommandComponent extends ShellComponent {
     name: 'say',
     prefix: '.',
     description: 'Sends a message to the console',
-    pattern: '<sender> [@message]',
+    pattern: '<sender> <@message>',
   })
   public async sayCommand(sender: string, message: string): Promise<string> {
     return `${sender} said: ${message || 'Nothing'}`

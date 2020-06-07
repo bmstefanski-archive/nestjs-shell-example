@@ -4238,8 +4238,10 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-nestjs-shell@../nest-shell:
-  version "1.0.1"
+nestjs-shell@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/nestjs-shell/-/nestjs-shell-1.0.7.tgz#145951c16b867e48ca40df68f6e7ab81794caa25"
+  integrity sha512-sQI24rLxCh61Q2nyhFmzkkbcL13r/UFJkbYqgTHKUSuWtxv1eHOBR6Y2fzGY+dspciYrUSHzAA6rm3Yo/UcoVA==
 
 next-tick@1:
   version "1.1.0"
